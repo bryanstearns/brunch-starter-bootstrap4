@@ -8,7 +8,16 @@ module.exports = {
         }
       },
       stylesheets: {
-        joinTo: 'app.css'
+        joinTo: {
+          'vendor.css': /^(?!app)/,
+          'app.css': /^app/
+        }
+      }
+    },
+
+    npm: {
+      styles: {
+        bootstrap: ['scss/bootstrap.scss']
       }
     }
   }
